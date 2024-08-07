@@ -16,7 +16,7 @@ function App() {
   }
   return (
     <div>
-      <button onClick={() => test()}>yoo test me</button>
+      <button className="bg-blue-400" onClick={() => test()}>yoo test me</button>
     </div>
   )
 }
