@@ -1,5 +1,7 @@
 import React from 'react'
 import  ProductDescriptionPageBody  from '@repo/ui/productdescriptionpage/productdescriptionpagebody'; 
+import { AppBar } from '@repo/ui/appbar';
+import { useNavigate } from 'react-router-dom';
 
 interface Product {
     id: number;
@@ -7,6 +9,8 @@ interface Product {
     description: string;
     tags: string[];
     images: string[]; // Array of image URLs
+    zipFileUrl: string; 
+    videoTutorialUrl?: string;
   }
   
 
@@ -21,12 +25,25 @@ const product: Product = {
       'https://via.placeholder.com/600x400?text=Image+2',
       'https://via.placeholder.com/600x400?text=Image+3',
     ],
+    zipFileUrl: 'https://examplefile.com/file-download/36',
+    videoTutorialUrl: 'https://www.youtube.com/watch?v=hj3oQU1z4P0&t=563s',
   };
 
 const ProductDescriptionPage: React.FC = () => {
+
+  const navigate = useNavigate();
     
   return (
     <div>
+      <AppBar
+          isAdmin={false}
+          login={() => {
+            navigate("/login");
+          }}
+          home={() => {
+            navigate("/");
+          }}
+        />
         <ProductDescriptionPageBody product={product} />
     </div>
   )
