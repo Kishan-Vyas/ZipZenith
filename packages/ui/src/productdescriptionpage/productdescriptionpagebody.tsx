@@ -102,8 +102,9 @@ const ProductDescriptionPageBody: React.FC<CarouselProps> = ({ product }) => {
           </div>
           <div>
             <div>Step 2 - Watch the video</div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/hj3oQU1z4P0?si=NlPgM-0GFiEOk6iK" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe> </div>
+            <iframe width="560" height="315" src={product.videoTutorialUrl} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe> </div>
         </div>
+        
       </div>
     </div>
   );

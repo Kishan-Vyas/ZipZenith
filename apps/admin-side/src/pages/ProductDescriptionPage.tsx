@@ -36,7 +36,7 @@ const ProductDescriptionPage: React.FC = () => {
   return (
     <div>
       <AppBar
-          isAdmin={false}
+          isAdmin={true}
           login={() => {
             navigate("/login");
           }}
