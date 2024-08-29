@@ -1,4 +1,3 @@
-import { db } from "@repo/db/firebase";
 import { AppBar } from "@repo/ui/appbar";
 import HomePagebody from "@repo/ui/homepage/homepagebody";
 import { useNavigate } from "react-router-dom";
